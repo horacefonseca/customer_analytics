@@ -13,6 +13,7 @@ A comprehensive interactive dashboard for customer analytics using RFM Analysis,
 ## Table of Contents
 
 - [Overview](#overview)
+- [Process Flow Visualization](#process-flow-visualization)
 - [Features](#features)
 - [Three Core Insights](#three-core-insights)
 - [Installation](#installation)
@@ -37,6 +38,77 @@ This project analyzes canteen shop transactional data to identify customer segme
 1. High-value customer profile and retention strategy
 2. Churn risk quantification and win-back priority
 3. Customer Lifetime Value (CLTV) analysis and Pareto principle validation
+
+---
+
+## Process Flow Visualization
+
+Understanding how the dashboard analyzes data and generates insights:
+
+### Simplified Analysis Pipeline
+
+```mermaid
+flowchart LR
+    A[📁 Raw Data] --> B[🧹 Clean Data]
+    B --> C[📊 RFM Analysis]
+    B --> D[💰 CLTV Calculation]
+    B --> E[🔍 KMeans Clustering]
+
+    C --> F[🎯 3 Core Insights]
+    D --> F
+    E --> F
+
+    F --> G[📈 7 Visualizations]
+    G --> H[💡 Business Actions]
+    H --> I[🚀 Interactive Dashboard]
+
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#e8f5e9
+    style E fill:#fce4ec
+    style F fill:#fff9c4
+    style G fill:#e0f2f1
+    style H fill:#ffe0b2
+    style I fill:#c8e6c9
+```
+
+### Three Core Insights Flow
+
+```mermaid
+flowchart TD
+    Data[📊 Cleaned Data] --> RFM[RFM Analysis]
+    Data --> CLTV[CLTV Calculation]
+    Data --> KMeans[KMeans Clustering]
+
+    RFM --> I1[💎 Insight 1:<br/>High-Value Profile<br/>Champions + VIP]
+    KMeans --> I1
+
+    RFM --> I2[⚠️ Insight 2:<br/>Churn Risk<br/>At Risk + Low Engagement]
+    KMeans --> I2
+
+    CLTV --> I3[💰 Insight 3:<br/>CLTV & Pareto<br/>80/20 Principle]
+
+    I1 --> Actions[🎯 Business Actions]
+    I2 --> Actions
+    I3 --> Actions
+
+    Actions --> A1[Retention: VIP Programs]
+    Actions --> A2[Win-Back: Discounts]
+    Actions --> A3[Growth: Upsell/Cross-sell]
+    Actions --> A4[Budget: 50/30/15/5 Split]
+
+    style I1 fill:#e8f5e9
+    style I2 fill:#fff3e0
+    style I3 fill:#e1f5fe
+    style Actions fill:#f3e5f5
+```
+
+**📖 For complete process flow diagrams**, see [docs/process_flow.md](docs/process_flow.md) including:
+- Complete analysis pipeline with all steps
+- Data flow architecture
+- Key metrics calculation flow
+- Technology stack diagram
 
 ---
 
